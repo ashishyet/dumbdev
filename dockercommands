@@ -1,0 +1,20 @@
+docker build -t imagename .  ------ builds and image along with container
+
+docker run imagename  ----runs the container
+
+docker ps -a  -----displays container id with info
+
+docker logs containerid
+
+docker rm containerid ----delete container
+
+docker image ls ---display images
+
+docker image rm imageid ----remove image
+
+docker login ---used to login
+
+docker pull imagename ----pull the docker images from docker hub
+
+docker push imagename ----push the docker images to the docker hub
+
