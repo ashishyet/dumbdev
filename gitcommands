@@ -1,0 +1,25 @@
+git init ----initializing repo
+git add . ----- adding files to staging area
+git commit -m "message"  ---- commits changes
+
+git remote add origin repourl --- connection between remote repo and local repo to push and pull changes
+
+git push -u origin main ---pushes 
+
+git log --- gives history of commits
+
+git status --- checks status
+
+git restore filename ----restore changes
+
+git branch ---shows all branches
+git branch feature --creates feature branch 
+git checkout branchname ----change from one branch to other branch
+
+git checkout -b feature ----create and move combination of branch and checkout
+
+git merge branchname --- merging the branches
+
+git pull --- get remote changes to local repo
+
+git clone url -----clones the repo
