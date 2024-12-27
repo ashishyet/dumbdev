@@ -1,0 +1,17 @@
+create a folder in index.html
+git init
+git add .
+git branch -M main
+git commit -m "initial commit"
+git remote add origin "repourl"
+git push -u origin main
+
+
+
+git pull //to fetch the files from remote to local
+git branch //shows all branches
+git checkout branchname //switch branches
+git branch -d 
+git log
+
+git merge feature
