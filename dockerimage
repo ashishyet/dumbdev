@@ -1,0 +1,25 @@
+
+create a directory in your system
+>mkdir my-app
+>cd mp-app
+create hello.py file and add following 
+print("hello world")
+
+
+create "Dockerfile" and add following 
+
+FROM python
+
+WORKDIR /app  
+
+COPY . /app
+
+CMD ["python", "hello.py"]
+
+use the following commands to create docker image
+
+make sure docker desktop is running
+
+in your project directory run the following
+>docker build -t image-name .
+>docker run image-name
