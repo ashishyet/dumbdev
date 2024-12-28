@@ -1,0 +1,22 @@
+const { Builder, By, Key, until } = require('selenium-webdriver');
+
+
+async function example()  {
+    const driver = await new Builder().forBrowser('chrome').build();
+        await driver.get('https://www.google.com');
+        await driver.wait(until.titleContains('Google'), 10000);
+        console.log('Test Case 1 Passed: Title contains "Google"');
+
+        await driver.findElement(By.name('q')).sendKeys('Selenium', Key.RETURN);
+        await driver.wait(until.titleContains('Selenium'), 10000);
+        console.log('Test Case 2 Passed: Title contains "Selenium"');
+        const searchResults = await driver.findElements(By.css('div.g'));
+        console.log(`Test Case 3 Passed: Found ${searchResults.length} search results`);
+        const searchInput = await driver.findElement(By.name('q'));
+        const isSearchInputDisplayed = await searchInput.isDisplayed();
+        console.log(`Test Case 4 Passed: Search input box is displayed: ${isSearchInputDisplayed}`);
+        await driver.quit();
+    
+}
+
+example()
